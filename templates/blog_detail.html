@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>BLOG_DETAIL</h1>
+    <a href="{% url 'blog:home'%}">Regresar a... </a>
+    <br>
+    <hr>
+
+    {{ post.pk}}
+    <br>
+
+    {{ post.title}}
+    <br>
+
+    {{ post.content}}
+    <br>
+{% endblock content %}

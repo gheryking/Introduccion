@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>BLOG_LIST</h1>
+<br>
+<hr>
+
+    {% for post in posts %}
+        <li>
+            <a href="{% url 'blog:detail' post.id %}"> {{ post.title }} </a>
+            <a href="{% url 'blog:update' post.id %}">Update</a>
+            <a href="{% url 'blog:delete' post.id %}">Delete</a>
+        </li>
+    {% endfor %}
+
+<br>
+<hr>
+
+<a class="" href="{% url 'blog:create' %}">Create</a>
+
+{% endblock content %}
